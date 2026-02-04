@@ -13,7 +13,7 @@ function App() {
         <Header
           fullName='Kenji "Brocks" I. Tabugadir'
           location="Cagayan, Philippines"
-          profilePicture=""
+          profilePicture="/profile.jpg"
         />
       </div>
     </div>
