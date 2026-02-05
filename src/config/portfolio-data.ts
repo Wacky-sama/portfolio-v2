@@ -6,7 +6,7 @@ export interface SocialLink {
 
 export interface TechStackItem {
   name: string;
-  category: 'frontend' | 'backend' | 'devops' | 'tools';
+  category: 'frontend' | 'backend' | 'database' | 'devops';
 }
 
 export interface Project {
@@ -36,12 +36,12 @@ export interface PortfolioData {
 // Your portfolio data - customize this!
 export const portfolioData: PortfolioData = {
   fullName: 'Kenji "Brocks" I. Tabugadir',
-  location: 'Philippines',
+  location: 'Cagayan, Philippines',
   profilePicture: '/profile.jpg',
   tagline: 'IT Student | Linux & Server Enthusiast | Full-Stack Developer',
 
   about: `I'm an IT student who loves building, breaking, and rebuilding systems until they actually make sense.
-I work with Linux servers, self-hosted services, and full-stack web applications using React, TypeScript, and modern backend stacks.
+I work with Linux servers, self-hosted services, and full-stack web applications using React, JavaScript, TypeScript, PHP, and modern backend stacks.
 
 Most of my projects involve deploying real systems on my own server — Docker, firewalls, monitoring, and automation included.
 When I’m not coding, I’m probably tweaking Linux configs, learning how things work under the hood, or keeping up with new tech trends.`,
@@ -69,28 +69,34 @@ When I’m not coding, I’m probably tweaking Linux configs, learning how thing
   techStack: [
     // Frontend
     { name: 'React', category: 'frontend' },
+    { name: 'HTML', category: 'frontend' },
+    { name: 'CSS3', category: 'frontend' },
+    { name: 'JavaScript', category: 'frontend' },
     { name: 'TypeScript', category: 'frontend' },
     { name: 'Tailwind CSS', category: 'frontend' },
-    { name: 'Next.js', category: 'frontend' },
-    { name: 'Vue.js', category: 'frontend' },
+    { name: 'Bootstrap', category: 'frontend' },
+    { name: 'Vite', category: 'frontend' },
+    { name: 'Figma', category: 'frontend' },
     
     // Backend
-    { name: 'Node.js', category: 'backend' },
-    { name: 'Deno', category: 'backend' },
+    { name: 'C#', category: 'backend' },
+    { name: '.NET MAUI', category: 'backend' },
     { name: 'Python', category: 'backend' },
-    { name: 'PostgreSQL', category: 'backend' },
-    { name: 'Supabase', category: 'backend' },
+    { name: 'PHP', category: 'backend' },
+    { name: 'Java', category: 'backend' },
+    { name: 'Deno', category: 'backend' },
+
+    // Database
+    { name: 'MySQL', category: 'database' },
+    { name: 'MariaDB', category: 'database' },
+    { name: 'PostgreSQL', category: 'database' },
+    { name: 'Supabase', category: 'database' },
     
     // DevOps
     { name: 'Docker', category: 'devops' },
     { name: 'Apache', category: 'devops' },
     { name: 'Linux', category: 'devops' },
     { name: 'Git', category: 'devops' },
-    
-    // Tools
-    { name: 'VS Code', category: 'tools' },
-    { name: 'Figma', category: 'tools' },
-    { name: 'Postman', category: 'tools' },
   ],
   
   projects: [
@@ -100,9 +106,10 @@ When I’m not coding, I’m probably tweaking Linux configs, learning how thing
       description: 'A minimalist portfolio with AI chat assistant built with React, TypeScript, and Gemini API',
       image: '/projects/portfolio-v2.png',
       techStack: ['React', 'TypeScript', 'Tailwind', 'Deno', 'Gemini AI'],
-      liveUrl: 'https://yourportfolio.com',
+      // liveUrl: 'https://yourportfolio.com',
       githubUrl: 'https://github.com/yourusername/portfolio-v2',
-      featured: true
+      featured: true,
+      target: "_blank"
     },
     {
       id: '2',
@@ -118,8 +125,18 @@ When I’m not coding, I’m probably tweaking Linux configs, learning how thing
       title: 'TRACE System',
       description: 'A role-based alumni management system with admin dashboards, event creation, and user approval features.',
       image: '/projects/project-3.png',
-      techStack: ['React', 'FastAPI', 'PostgreSQL', 'Tailwind CSS'],
+      techStack: ['React', 'Python - FastAPI', 'PostgreSQL', 'Tailwind CSS'],
       githubUrl: 'https://github.com/Wacky-sama/TRACE',
+      target: "_blank"
+    },
+    {
+      id: '4',
+      title: 'Nextcloud',
+      description: 'A cloud-based storage.',
+      image: '/projects/project-4.png',
+      techStack: ['Linux (Debian 13)'],
+      liveUrl: 'http://cloud.kenjibrocks.com/',
+      target: "_blank"
     },
   ]
 };

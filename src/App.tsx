@@ -17,7 +17,6 @@ function App() {
           profilePicture={portfolioData.profilePicture}
         />
 
-        About Section
         <About
           tagline={portfolioData.tagline}
           about={portfolioData.about}

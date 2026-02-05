@@ -1,5 +1,7 @@
 import type { SocialLink } from '../config/portfolio-data';
-import { Github, Linkedin, Twitter, Mail, Globe } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { Mail, Globe } from 'lucide-react';
 import type { ReactElement } from 'react';
 
 interface SocialLinksProps {
@@ -10,9 +12,9 @@ interface SocialLinksProps {
 export default function SocialLinks({ socialLinks, email }: SocialLinksProps) {
   const getIcon = (iconName: string): ReactElement => {
     const icons: Record<string, ReactElement> = {
-      github: <Github size={20} />,
-      linkedin: <Linkedin size={20} />,
-      twitter: <Twitter size={20} />,
+      github: <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />,
+      linkedin: <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5" />,
+      twitter: <FontAwesomeIcon icon={faXTwitter} className="w-5 h-5" />,
       globe: <Globe size={20} />,
     };
     return icons[iconName.toLowerCase()] || <Globe size={20} />;

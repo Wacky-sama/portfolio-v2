@@ -26,8 +26,8 @@ export default function TechStack({ techStack }: TechStackProps) {
   const categories = {
     frontend: techStack.filter(tech => tech.category === 'frontend'),
     backend: techStack.filter(tech => tech.category === 'backend'),
+    database: techStack.filter(tech => tech.category === 'database'),
     devops: techStack.filter(tech => tech.category === 'devops'),
-    tools: techStack.filter(tech => tech.category === 'tools'),
   };
 
   return (
@@ -37,8 +37,8 @@ export default function TechStack({ techStack }: TechStackProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <CategorySection title="Frontend" items={categories.frontend} />
         <CategorySection title="Backend" items={categories.backend} />
+        <CategorySection title="Database" items={categories.database} />
         <CategorySection title="DevOps" items={categories.devops} />
-        <CategorySection title="Tools" items={categories.tools} />
       </div>
     </section>
   );
