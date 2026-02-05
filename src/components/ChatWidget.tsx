@@ -10,10 +10,11 @@ export default function ChatWidget() {
       {/* Floating Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-40 bg-gray-900 text-white p-4 rounded-full shadow-lg hover:bg-gray-800 transition-all hover:scale-110 active:scale-95"
+        className="fixed bottom-6 right-8 z-40 flex items-center gap-2 bg-gray-900 text-white p-6 rounded-full shadow-lg hover:bg-gray-800 transition-all hover:scale-110 active:scale-95"
         aria-label="Open chat"
       >
-        <MessageCircle size={24} />
+        <MessageCircle size={20} />
+        <span>Chat with Kenji</span>
       </button>
 
       {/* Chat Modal */}
