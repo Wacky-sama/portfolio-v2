@@ -6,10 +6,12 @@ import SocialLinks from './components/SocialLinks';
 import Footer from './components/Footer';
 import ChatWidget from './components/ChatWidget';
 import { portfolioData } from './config/portfolio-data';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen dark:bg-dark-bg">
+      <ThemeToggle />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         {/* Header Section */}
         <Header
