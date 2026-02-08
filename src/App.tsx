@@ -6,14 +6,13 @@ import SocialLinks from './components/SocialLinks';
 import Footer from './components/Footer';
 import ChatWidget from './components/ChatWidget';
 import { portfolioData } from './config/portfolio-data';
-import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   return (
-    <div className="min-h-screen dark:bg-dark-bg">
-      <ThemeToggle />
+    <div
+      className="min-h-screen bg-white dark:bg-dark-bg text-black dark:text-dark-text transition-colors duration-500 ease-in-out"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-        {/* Header Section */}
         <Header
           fullName={portfolioData.fullName}
           location={portfolioData.location}
@@ -25,24 +24,19 @@ function App() {
           about={portfolioData.about}
         />
 
-        {/* Tech Stack Section */}
         <TechStack techStack={portfolioData.techStack} />
-
-        {/* Projects Section */}
         <Projects projects={portfolioData.projects} />
-
-        {/* Social Links Section */}
         <SocialLinks
           socialLinks={portfolioData.socialLinks}
           email={portfolioData.email}
         />
-
-        {/* Footer */}
         <Footer />
       </div>
+
       <ChatWidget />
     </div>
   );
 }
+
 
 export default App;
