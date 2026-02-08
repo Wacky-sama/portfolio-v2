@@ -53,7 +53,7 @@ export default function Projects({ projects }: ProjectsProps) {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-gray-900 transition-colors"
+                      className="dark:text-gray-100 hover:text-gray-900 transition-colors"
                       aria-label="View live demo"
                     >
                       <ExternalLink size={18} />

@@ -133,8 +133,9 @@ When I’m not coding, I’m probably tweaking Linux configs, learning how thing
       title: 'Nextcloud',
       description: 'A cloud-based storage.',
       image: '/projects/project-4.png',
-      techStack: ['Linux (Debian 13)'],
+      techStack: ['Linux (Debian 13)', 'Apache', 'MariaDB', 'PHP', 'UFW'],
       liveUrl: 'http://cloud.kenjibrocks.com/',
+      githubUrl: 'https://github.com/Wacky-sama/Linux-Hive-Home-Passive-Income-Server/blob/main/docs/nextcloud-setup-guide.md',
       target: "_blank"
     },
   ]
