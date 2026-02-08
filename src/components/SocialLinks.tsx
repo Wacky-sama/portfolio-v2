@@ -22,7 +22,7 @@ export default function SocialLinks({ socialLinks, email }: SocialLinksProps) {
 
   return (
     <section className="mt-16 pb-16 border-b border-gray-200">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Connect</h2>
+      <h2 className="text-2xl font-bold dark:text-gray-100 mb-6">Connect</h2>
       
       <div className="flex flex-wrap gap-4">
         {/* Social Links */}
@@ -34,10 +34,10 @@ export default function SocialLinks({ socialLinks, email }: SocialLinksProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all group"
           >
-            <span className="text-gray-600 group-hover:text-gray-900 transition-colors">
+            <span className="dark:text-gray-100 group-hover:text-gray-900 transition-colors">
               {getIcon(link.icon)}
             </span>
-            <span className="text-sm text-gray-700 group-hover:text-gray-900 transition-colors">
+            <span className="text-sm dark:text-gray-100 group-hover:text-gray-900 transition-colors">
               {link.platform}
             </span>
           </a>
@@ -46,7 +46,7 @@ export default function SocialLinks({ socialLinks, email }: SocialLinksProps) {
         {/* Email */}
         <a
           href={`mailto:${email}`}
-          className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all group"
+          className="flex items-center gap-2 px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-black dark:hover:text-white transition-all group"
         >
           <Mail size={20} />
           <span className="text-sm">Email Me</span>

@@ -17,6 +17,7 @@ function App() {
           fullName={portfolioData.fullName}
           location={portfolioData.location}
           profilePicture={portfolioData.profilePicture}
+          tagline={portfolioData.tagline}
         />
 
         <About

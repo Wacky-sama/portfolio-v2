@@ -8,13 +8,13 @@ interface ProjectsProps {
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <section className="mt-16">
-      <h2 className="text-2xl font-bold text-gray-900 mb-8">Projects</h2>
-      
+      <h2 className="text-2xl font-bold dark:text-gray-100 mb-8">Projects</h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="group border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 transition-all hover:shadow-md"
+            className="group border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-black hover:border-gray-50 dark:hover:bg-gray-900 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-md"
           >
             {/* Project Image */}
             <div className="aspect-video bg-gray-100 overflow-hidden">
@@ -28,21 +28,21 @@ export default function Projects({ projects }: ProjectsProps) {
                 }}
               />
             </div>
-            
+
             {/* Project Info */}
             <div className="p-6">
               <div className="flex items-start justify-between mb-3">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+                <h3 className="text-lg font-semibold dark:text-gray-100 group-hover:text-blue-500 transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <div className="flex gap-2">
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-gray-900 transition-colors"
+                      className="dark:text-gray-100 hover:text-gray-900 transition-colors"
                       aria-label="View on GitHub"
                     >
                       <Github size={18} />
@@ -61,17 +61,17 @@ export default function Projects({ projects }: ProjectsProps) {
                   )}
                 </div>
               </div>
-              
-              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+
+              <p className="dark:text-gray-100 text-sm mb-4 leading-relaxed">
                 {project.description}
               </p>
-              
+
               {/* Tech Stack Tags */}
               <div className="flex flex-wrap gap-2">
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                    className="px-2 py-1 bg-white dark:bg-black text-black dark:text-white text-sm rounded border border-gray-200 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors"
                   >
                     {tech}
                   </span>

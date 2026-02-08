@@ -4,9 +4,10 @@ interface HeaderProps {
   fullName: string;
   location: string;
   profilePicture: string;
+  tagline: string;
 }
 
-export default function Header({ fullName, location, profilePicture }: HeaderProps) {
+export default function Header({ fullName, location, profilePicture, tagline }: HeaderProps) {
   return (
     <header className="flex items-center justify-between">
       <div className="flex items-center gap-4">
@@ -21,6 +22,9 @@ export default function Header({ fullName, location, profilePicture }: HeaderPro
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
             {location}
+          </p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {tagline}
           </p>
         </div>
       </div>

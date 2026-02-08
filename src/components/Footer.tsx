@@ -5,10 +5,10 @@ export default function Footer() {
 
   return (
     <footer className="mt-16 py-8 text-center">
-      <p className="text-sm text-gray-500">
+      <p className="text-sm dark:text-gray-100">
         © {currentYear} {portfolioData.fullName}. All rights reserved.
       </p>
-      <p className="text-xs text-gray-400 mt-2">
+      <p className="text-xs dark:text-gray-200 mt-2">
         Self-hosted on Debian Server
       </p>
     </footer>

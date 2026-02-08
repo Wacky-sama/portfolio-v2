@@ -6,14 +6,14 @@ interface TechStackProps {
 
 const CategorySection = ({ title, items }: { title: string; items: TechStackItem[] }) => (
     <div>
-      <h3 className="text-xs uppercase tracking-wider text-gray-500 mb-3">
+      <h3 className="text-xs uppercase tracking-wider text-gray-500 dark:text-white mb-3">
         {title}
       </h3>
       <div className="flex flex-wrap gap-2">
         {items.map((tech) => (
           <span
             key={tech.name}
-            className="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-md hover:bg-gray-200 transition-colors"
+            className="px-3 py-1.5 bg-white text-black dark:bg-black dark:text-white text-sm rounded-md border border-gray-200 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
           >
             {tech.name}
           </span>
@@ -32,9 +32,9 @@ export default function TechStack({ techStack }: TechStackProps) {
 
   return (
     <section className="mt-16">
-      <h2 className="text-2xl font-bold text-gray-900 mb-8">Tech Stack</h2>
+      <h2 className="text-2xl font-bold dark:text-gray-100 mb-8">Tech Stack</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="dark:text-gray-100 grid grid-cols-1 md:grid-cols-2 gap-8">
         <CategorySection title="Frontend" items={categories.frontend} />
         <CategorySection title="Backend" items={categories.backend} />
         <CategorySection title="Database" items={categories.database} />

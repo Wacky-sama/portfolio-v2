@@ -33,7 +33,6 @@ export interface PortfolioData {
   projects: Project[];
 }
 
-// Your portfolio data - customize this!
 export const portfolioData: PortfolioData = {
   fullName: 'Kenji "Brocks" I. Tabugadir',
   location: 'Cagayan, Philippines',
@@ -102,9 +101,9 @@ When I’m not coding, I’m probably tweaking Linux configs, learning how thing
   projects: [
     {
       id: '1',
-      title: 'Portfolio',
+      title: 'Portfolio V2 with AI Chat Assistant',
       description: 'A minimalist portfolio with AI chat assistant built with React, TypeScript, and Gemini API',
-      image: '/projects/portfolio-v2.png',
+      image: '/projects/project-1.png',
       techStack: ['React', 'TypeScript', 'Tailwind', 'Deno', 'Gemini AI'],
       // liveUrl: 'https://yourportfolio.com',
       githubUrl: 'https://github.com/yourusername/portfolio-v2',

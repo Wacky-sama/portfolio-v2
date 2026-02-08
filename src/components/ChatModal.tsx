@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { X, Send, Loader2 } from 'lucide-react';
 import { sendChatMessage } from '../services/chatService';
+import { portfolioData } from '../config/portfolio-data';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -94,12 +95,19 @@ export default function ChatModal({ onClose }: ChatModalProps) {
       />
 
       {/* Chat Container */}
-      <div className="relative w-full max-w-md h-[600px] bg-white rounded-lg shadow-2xl flex flex-col animate-slideUp">
+      <div className="relative w-full max-w-md h-[600px] bg-white dark:bg-black rounded-lg shadow-2xl flex flex-col animate-slideUp">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-200">
-          <div>
-            <h3 className="font-semibold text-gray-900">Chat with Kenji</h3>
-            <p className="text-xs text-green-600">Online</p>
+        <div className="flex items-center justify-between p-4 border-b border-gray-300 dark:border-gray-700">
+          <div className="flex items-center">
+            <img 
+              src={portfolioData.profilePicture} 
+              alt="Kenji's profile" 
+              className="w-10 h-10 rounded-full object-cover mr-3"
+            />
+            <div>
+              <h3 className="font-semibold dark:text-white">Chat with Kenji</h3>
+              <p className="text-xs text-green-600">Online</p>
+            </div>
           </div>
           <button
             onClick={onClose}
@@ -118,7 +126,7 @@ export default function ChatModal({ onClose }: ChatModalProps) {
               className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                className={`max-w-[80%] rounded-lg px-4 py-2 dark:bg-gray-600 dark:text-white ${
                   message.role === 'user'
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-100 text-gray-900'
@@ -151,7 +159,7 @@ export default function ChatModal({ onClose }: ChatModalProps) {
         </div>
 
         {/* Input */}
-        <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
+        <form onSubmit={handleSubmit} className="p-4 border-t border-gray-300 dark:border-gray-700">
           <div className="flex gap-2">
             <input
               ref={inputRef}
@@ -160,7 +168,7 @@ export default function ChatModal({ onClose }: ChatModalProps) {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Type a message..."
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+              className="flex-1 px-4 py-2 border dark:bg-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
               disabled={isLoading}
               maxLength={1000}
             />
